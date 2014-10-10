@@ -1,5 +1,2 @@
-require "mandao/version"
-
-module Mandao
-  # Your code goes here...
-end
+require 'mandao/version'
+require 'mandao/configuration'

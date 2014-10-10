@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Marlon Mantilla"]
   spec.email         = ["me@marlonmantilla.com"]
   spec.summary       = %q{Mandao is a cool gem for accessing the Click2Mail REST API. https://developers.click2mail.com/rest-api/molpro/getting-started/main}
-  spec.description   = %q{Mandao gem allows developers to access Click2Mail REST services in a simple way.}
+  spec.description   = %q{Mandao allows you to access Click2Mail REST services in a simple way.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.1.0"
+  spec.add_development_dependency "webmock", "~> 1.19.0"
 end
