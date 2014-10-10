@@ -1,6 +1,6 @@
 # Mandao
 
-TODO: Write a gem description
+Mandao gem allows developers to access Click2Mail REST services in a simple way.
 
 ## Installation
 
