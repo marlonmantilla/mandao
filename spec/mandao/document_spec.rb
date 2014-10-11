@@ -9,10 +9,18 @@ describe Mandao::Document do
       config.password = "password"
     end
     stub_documents
+    stub_document_post
   end
 
   it 'should return all documents' do
     documents = Mandao::Document.all
+    expect(documents).to be_present
+  end
+
+  it 'should create a document with a pdf' do
+    pdf = File.open(File.expand_path('../files/document.pdf', __FILE__), 'rb')
+    document = Mandao::Document.create(pdf)
+    expect(document).to be_present
   end
 
 end
