@@ -1,3 +1,6 @@
+require 'active_resource'
+require File.expand_path('../../configuration', __FILE__)
+
 module Mandao
   class Base < ActiveResource::Base
     self.include_format_in_path = false
@@ -6,7 +9,7 @@ module Mandao
 
       def activate
         self.site = Mandao.config.api_endpoint
-        self.format = ActiveResource::Formats::XmlFormat
+        self.format = Mandao.config.format
       end
 
       def parse_response(xml)

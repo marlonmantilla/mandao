@@ -1,3 +1,5 @@
+require 'rest_client'
+
 module Mandao
 
   class DocumentCollection < ActiveResource::Collection
