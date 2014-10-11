@@ -14,12 +14,16 @@ def stub_document_post
   stub_request(:post, "https://username:password@#{ Mandao::Configuration::DEFAULT_ENDPOINT }/documents").
     with(headers: {'Accept' => 'application/xml', 'Content-Type' => 'application/pdf'}).
     to_return(status: 200, body: xml)
-
 end
 
 def stub_address_lists
  xml = "<addressLists><addressList><id>29547</id><ready>false</ready><total>0</total></addressList></addressLists>"
  stub_request(:get, "https://username:password@#{ Mandao::Configuration::DEFAULT_ENDPOINT }/addressLists").
-   with(:headers => {'Accept'=>'application/xml', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
+   to_return(:status => 200, :body => xml, :headers => {})
+end
+
+def stub_address_lists_post
+ xml = "<addressList><id>29546</id><ready>false</ready><total>0</total></addressList>"
+ stub_request(:post, "https://username:password@stage.rest.click2mail.com/v1/addressLists").
    to_return(:status => 200, :body => xml, :headers => {})
 end
