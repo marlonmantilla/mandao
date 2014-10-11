@@ -26,12 +26,10 @@ module Mandao
     REQUIRED_OPTIONS   = [:username, :password]
     DEFAULT_PROTOCOL   = "https".freeze
     DEFAULT_ENDPOINT   = 'stage.rest.click2mail.com/v1'.freeze # TODO [ add production endpoint by default ]
-    DEFAULT_FORMAT     = ActiveResource::Formats::XmlFormat
 
     def initialize
       @endpoint = DEFAULT_ENDPOINT
       @protocol = DEFAULT_PROTOCOL
-      @format   = DEFAULT_FORMAT
     end
 
     def api_endpoint

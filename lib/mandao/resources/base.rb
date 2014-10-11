@@ -6,7 +6,7 @@ module Mandao
 
       def activate
         self.site = Mandao.config.api_endpoint
-        self.format = Mandao.config.format
+        self.format = ActiveResource::Formats::XmlFormat
       end
 
       def parse_response(xml)
