@@ -2,7 +2,9 @@ module Mandao
 
   class DocumentCollection < ActiveResource::Collection
     def initialize(parsed = {})
-      @elements = parsed['document']
+      attrs = []
+      attrs << parsed['document'] if parsed['document'].is_a? Hash
+      @elements = attrs || parsed['document']
     end
   end
 
