@@ -1,3 +1,3 @@
 module Mandao
-  VERSION = "0.0.2pre2"
+  VERSION = "0.0.3"
 end
