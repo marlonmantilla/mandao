@@ -1,4 +1,7 @@
 require 'mandao/version'
-Dir.glob(File.expand_path('../resources/*', __FILE__)).each { |file| require(file) } 
 require 'mandao/xml_format'
+require 'mandao/resources/base'
+require 'mandao/resources/address'
+require 'mandao/resources/address_list'
+require 'mandao/resources/document'
 require 'mandao/configuration'
