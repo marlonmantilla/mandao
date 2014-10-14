@@ -1,4 +1,3 @@
-require 'active_resource'
 require File.expand_path('../../configuration', __FILE__)
 
 module Mandao

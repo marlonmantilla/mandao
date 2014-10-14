@@ -1,4 +1,3 @@
-require 'active_resource'
 require File.expand_path('../resources/base', __FILE__)
 
 module Mandao

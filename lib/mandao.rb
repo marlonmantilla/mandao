@@ -1,5 +1,8 @@
 require 'mandao/version'
+require 'rest_client'
+require 'active_resource'
 require 'mandao/xml_format'
+
 require 'mandao/resources/base'
 require 'mandao/resources/address'
 require 'mandao/resources/address_list'
