@@ -11,6 +11,14 @@ module ActiveResource
         end
       end
 
+      def extension
+        "xml"
+      end
+
+      def mime_type
+        "application/xml"
+      end
+
     end
   end
 end
