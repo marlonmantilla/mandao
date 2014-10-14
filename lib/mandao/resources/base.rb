@@ -1,4 +1,5 @@
 require File.expand_path('../../configuration', __FILE__)
+require File.expand_path('../../xml_format', __FILE__)
 
 module Mandao
   class Base < ActiveResource::Base
