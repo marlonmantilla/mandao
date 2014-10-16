@@ -4,7 +4,11 @@ module Mandao
     def initialize(parsed = {})
       attrs = []
       attrs << parsed['document'] if parsed['document'].is_a? Hash
-      @elements = attrs || parsed['document']
+      @elements = if attrs.present?
+                      attrs 
+                    else 
+                      parsed['document']
+                    end
     end
   end
 

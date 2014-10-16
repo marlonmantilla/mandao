@@ -14,7 +14,7 @@ describe Mandao::AddressList do
 
   it 'should return all address lists' do
     address_lists = Mandao::AddressList.all
-    expect(address_lists).to be_present
+    expect(address_lists.count).to be > 0
   end
 
   it 'should create an address list' do

@@ -17,7 +17,7 @@ def stub_document_post
 end
 
 def stub_address_lists
- xml = "<addressLists><addressList><id>29547</id><ready>false</ready><total>0</total></addressList></addressLists>"
+ xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<addressLists>\n    <addressList>\n        <id>55738</id>\n        <ready>false</ready>\n        <total>0</total>\n    </addressList>\n    <addressList>\n        <id>55739</id>\n        <ready>false</ready>\n        <total>0</total>\n    </addressList>\n</addressLists>\n"
  stub_request(:get, "https://username:password@#{ Mandao::Configuration::DEFAULT_ENDPOINT }/addressLists").
    to_return(:status => 200, :body => xml, :headers => {})
 end

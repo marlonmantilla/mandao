@@ -3,8 +3,13 @@ module Mandao
   class AddressListCollection < ActiveResource::Collection
     def initialize(parsed = {})
       attrs = []
+      parsed['addressList']
       attrs << parsed['addressList'] if parsed['addressList'].is_a? Hash
-      @elements = attrs || parsed['addressList']
+      @elements = if attrs.present?
+                      attrs 
+                    else 
+                      parsed['addressList']
+                    end
     end
   end
 

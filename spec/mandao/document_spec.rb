@@ -14,7 +14,7 @@ describe Mandao::Document do
 
   it 'should return all documents' do
     documents = Mandao::Document.all
-    expect(documents).to be_present
+    expect(documents.count).to be > 0
   end
 
   it 'should create a document with a pdf' do
