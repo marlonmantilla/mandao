@@ -1,5 +1,3 @@
-require File.expand_path('../address', __FILE__)
-
 module Mandao
 
   class AddressListCollection < ActiveResource::Collection

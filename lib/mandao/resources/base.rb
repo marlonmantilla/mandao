@@ -1,15 +1,16 @@
-require File.expand_path('../../configuration', __FILE__)
-require File.expand_path('../../xml_format', __FILE__)
-
 module Mandao
   class Base < ActiveResource::Base
     self.include_format_in_path = false
 
     class << self
 
-      def activate
-        self.site = Mandao.config.api_endpoint
-        self.format = Mandao.config.format
+      def activate(options={})
+        begin
+          self.site = options[:api_endpoint]
+          self.format = options[:default_format]
+        rescue
+          raise 'Missing api_endpoint, default_format configuration'
+        end
       end
 
       def parse_response(xml)
